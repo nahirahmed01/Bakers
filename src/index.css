@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap');
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-gold: #facc15;
+  --color-gold-dark: #eab308;
+  --color-bg-deep: #000000;
+  --color-card-bg: #111111;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-deep text-white antialiased font-sans;
+  }
+}
+
+.yellow-glow {
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.2);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
